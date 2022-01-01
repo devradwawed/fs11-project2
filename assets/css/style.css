@@ -68,6 +68,9 @@ body{
 .navbar{
   background-color: #fff;
   padding: 20px 40px;
+  position: sticky;
+  z-index: 999;
+  top: 0;
 }
 .navbar .navbar-brand img{
   max-height: 40px;
@@ -192,7 +195,19 @@ body{
     color: #fff;
     text-decoration: none;
     margin: 30px 14px;
-  }
+    transition: all .4s ease-in  ;
+    -webkit-transition: all .4s ease-in  ;
+    -moz-transition: all .4s ease-in  ;
+    -ms-transition: all .4s ease-in  ;
+    -o-transition: all .4s ease-in  ;
+}
+  .navbar .close-icon:hover{
+    transform:rotate(360deg)  ;
+    -webkit-transform:rotate(360deg)  ;
+    -moz-transform:rotate(360deg)  ;
+    -ms-transform:rotate(360deg)  ;
+    -o-transform:rotate(360deg)  ;
+}
   .navbar .navbar-nav{
     padding: 40px 0;
   }
@@ -318,7 +333,7 @@ body{
 */
 header{
   background-color: #fff;
-  height: 100vh;
+  padding:120px 0;
   position: relative;
   overflow: hidden;
 }
@@ -414,8 +429,10 @@ header .box-img::after{
   background-repeat: no-repeat;
   top: -10%;
   right: 0%;
+  transform-origin: 50% 50% ;
   animation: imgIcon 1s ease-in infinite alternate;
   -webkit-animation: imgIcon 1s ease-in infinite alternate;
+
 }
 @keyframes imgIcon {
   0%{
@@ -430,4 +447,36 @@ header .box-img .img-item{
   position: absolute;
   left: 0;
   width: 45%;
+}
+@media (max-width:991px) {
+  header .content h1 {
+    font-size: 33px;
+}
+}
+@media (max-width:767px) {
+  header .col-lg-5{
+    order: 2;
+  }
+  header .col-lg-6{
+    order: 1;
+  }
+  header .box-img {
+    width: 60%;
+    margin: auto;
+}
+header .content{
+  text-align: center;
+  margin-top: 32px;
+}
+header .content h1 {
+  font-size: 32px;
+}
+}
+@media (max-width:575px) {
+  header .content h3 {
+    font-size: 27px;
+  }
+  header .content h1 {
+    font-size: 27px;
+  }
 }
