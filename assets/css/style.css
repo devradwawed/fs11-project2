@@ -9,12 +9,43 @@
   font-family: 'Quicksand', sans-serif;
 }
 body{
-  background-color: #f7f7f7;
   height: 10000000px;
+}
+a:hover{
+  text-decoration: none;
 }
 :root{
   --fristColor:#009961;
   --twoColor:#333;
+}
+.title{
+
+}
+.title span{
+  display: block;
+  color: #009961;
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+.title h2{
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 52px;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  position: relative;
+}
+.title h2::before{
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  background: var(--fristColor);
+  left: 0;
+  bottom: 0;
 }
 .btn-full-back{
   background-color: var(--fristColor);
@@ -71,6 +102,20 @@ body{
   position: sticky;
   z-index: 999;
   top: 0;
+  transition: all .4s ease-in;
+  -webkit-transition: all .4s ease-in;
+  -moz-transition: all .4s ease-in;
+  -ms-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+}
+.navbar.scrolled{
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px -10px rgb(0 0 0 / 80%);
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
 }
 .navbar .navbar-brand img{
   max-height: 40px;
@@ -164,6 +209,11 @@ body{
 }
 .navbar .navbar-nav .nav-item .nav-derop .derop-item .derop-link{
   color: #fff;
+}
+@media (min-width:992px) and (max-width:1086px){
+  .navbar .navbar-nav .nav-item {
+    margin: 0 10px;
+}
 }
 @media (max-width:991px) {
   .navbar .navbar-toggler i{
@@ -430,17 +480,23 @@ header .box-img::after{
   top: -10%;
   right: 0%;
   transform-origin: 50% 50% ;
-  animation: imgIcon 1s ease-in infinite alternate;
-  -webkit-animation: imgIcon 1s ease-in infinite alternate;
-
+  animation: imgIcon 2s ease-in infinite alternate;
+  -webkit-animation: imgIcon 2s ease-in infinite alternate;
 }
 @keyframes imgIcon {
   0%{
-    transform: rotateY(45deg);
-    -webkit-transform: rotateY(45deg);
-    -moz-transform: rotateY(45deg);
-    -ms-transform: rotateY(45deg);
-    -o-transform: rotateY(45deg);
+    transform: perspective(1000px) translate3d(0px ,0px ,0px ) rotateY(50deg);
+    -webkit-transform: perspective(1000px) translate3d(0px ,0px ,0px ) rotateY(50deg);
+    -moz-transform: perspective(1000px) translate3d(0px ,0px ,0px ) rotateY(50deg);
+    -ms-transform: perspective(1000px) translate3d(0px ,0px ,0px ) rotateY(50deg);
+    -o-transform: perspective(1000px) translate3d(0px ,0px ,0px ) rotateY(50deg);
+}
+100%{
+  transform: perspective(1000px) translate3d(0px ,0px ,0px ) rotateY(-50deg);
+  -webkit-transform: perspective(1000px) translate3d(0px ,0px ,0px ) rotateY(-50deg);
+  -moz-transform: perspective(1000px) translate3d(0px ,0px ,0px ) rotateY(-50deg);
+  -ms-transform: perspective(1000px) translate3d(0px ,0px ,0px ) rotateY(-50deg);
+  -o-transform: perspective(1000px) translate3d(0px ,0px ,0px ) rotateY(-50deg);
 }
 }
 header .box-img .img-item{
@@ -479,4 +535,144 @@ header .content h1 {
   header .content h1 {
     font-size: 27px;
   }
+}
+/* ======================Works================== */
+.works{
+
+}
+.works .card{
+  border: 0;
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 35px 0;
+  box-shadow: 0px 0px 150px 0px #eeeeee;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -ms-border-radius: 10px 10px 10px 10px;
+  -o-border-radius: 10px 10px 10px 10px;
+  transition: all .4s ease-in;
+  -webkit-transition: all .4s ease-in;
+  -moz-transition: all .4s ease-in;
+  -ms-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+  margin-bottom:30px ;
+}
+.works .card:hover{
+  background-color: var(--fristColor);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}
+
+.works .card .card-img-top{
+  max-width: 170px;
+  margin:auto;
+}
+.works .card .card-title{
+  color: #282828;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  display: block;
+  transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+}
+.works .card .card-text{
+  color: #646464;
+  transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+}
+.works .card:hover .card-title , .works .card:hover .card-text{
+  color:#fff;
+}
+
+/* ==============================about ====================== */
+.about-us{
+  padding: 100px 0;
+}
+.about-us .img-about img{
+  width: 100%;
+}
+.about-us .content-about p{
+  color:#54595F;
+  font-weight: 500;
+}
+.about-us .content-about ul{
+  margin: 0;
+}
+.about-us .content-about ul li{
+  position: relative;
+  padding-left: 25px ;
+  line-height: 34px;
+}
+.about-us .content-about ul li i{
+  color:var(--fristColor);
+  font-size:15px;
+  margin-right: 7px;
+}
+@media (max-width:575px) {
+  .title h2 {
+  font-size: 22px;
+  line-height: 30px;
+}
+}
+
+/* ==========================contact */
+.contact{
+  background-image: url("../img/call-to-action-2.jpg");
+  padding: 82px 0px 178px 0px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.contact .title-contact{
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+.contact .title-contact h2{
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 52px;
+  color: #fff;
+  margin-bottom: 35px;
+}
+/* =========conuter============= */
+.counter-up{
+  box-shadow: 0px 14px 30px 0px rgb(0 0 0 / 7%);
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+  width: 85%;
+  margin: -115px auto 0;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.counter-up span {
+  color: #009961;
+  font-size: 60px;
+  font-weight: 600;
+  padding: 0px 0px 31px 0px;
+}
+.counter-up p{
+  color: #282828;
+  font-size: 20px;
+  font-weight: 600;
 }

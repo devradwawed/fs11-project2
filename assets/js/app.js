@@ -8,6 +8,11 @@ $(document).ready(()=>{
     $(".navbar-collapse").animate({"right":"0%"}, 200);
   })
   $(".nav-item").click(function(){
-    $(this).toggleClass("click-drop")
+    $(this).toggleClass("click-drop").siblings().removeClass("click-drop");
+  });
+
+
+  $(window).scroll(function(){
+    $(".navbar").toggleClass("scrolled" ,$(this).scrollTop() > 50)
   })
 })
