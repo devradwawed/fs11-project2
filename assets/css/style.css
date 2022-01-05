@@ -14,14 +14,17 @@ body{
 a:hover{
   text-decoration: none;
 }
+
 :root{
   --fristColor:#009961;
   --twoColor:#333;
 }
-.title{
-
+.title-center{
+  text-align: center;
+  margin: auto;
+  width:50%;
 }
-.title span{
+.title span , .title-center span{
   display: block;
   color: #009961;
   line-height: 26px;
@@ -30,7 +33,7 @@ a:hover{
   margin: 0 0 10px;
   text-transform: uppercase;
 }
-.title h2{
+.title h2 , .title-center h2{
   font-size: 42px;
   font-weight: 700;
   line-height: 52px;
@@ -38,7 +41,7 @@ a:hover{
   padding-bottom: 25px;
   position: relative;
 }
-.title h2::before{
+.title h2::before , .title-center h2::before{
   content: "";
   position: absolute;
   width: 50px;
@@ -46,6 +49,14 @@ a:hover{
   background: var(--fristColor);
   left: 0;
   bottom: 0;
+}
+.title-center h2::before{
+  left: 50%;
+  transform:translateX(-50%);
+  -webkit-transform:translateX(-50%);
+  -moz-transform:translateX(-50%);
+  -ms-transform:translateX(-50%);
+  -o-transform:translateX(-50%);
 }
 .btn-full-back{
   background-color: var(--fristColor);
@@ -111,11 +122,7 @@ a:hover{
 .navbar.scrolled{
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 20px -10px rgb(0 0 0 / 80%);
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
-  -o-transform: translateY(-10px);
+  top: -10px;
 }
 .navbar .navbar-brand img{
   max-height: 40px;
@@ -174,7 +181,7 @@ a:hover{
   width: 170px;
   padding: 20px;
   left: 0;
-  top: 44px;
+  top: 266%;
   border-radius: 0 0 4px 4px;
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
@@ -675,4 +682,206 @@ header .content h1 {
   color: #282828;
   font-size: 20px;
   font-weight: 600;
+}
+@media (max-width:575px) {
+  .contact .title-contact{
+    width: 100%;
+  }
+  .contact .title-contact h2 {
+    font-size: 30px;
+    line-height: 43px;
+}
+.counter-up span {
+  font-size: 45px;
+}
+}
+@media (max-width:390px) {
+  .contact .title-contact{
+    width: 88%;
+  }
+}
+/* ====================services=================== */
+.services{
+  padding: 100px 0;
+}
+.services .box{
+  box-shadow: 0 0 30px rgb(228 219 219 / 50%);
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: all .4s ease-in;
+  -webkit-transition: all .4s ease-in;
+  -moz-transition: all .4s ease-in;
+  -ms-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+  border-bottom: 3px solid transparent;
+  margin-bottom:15px;
+}
+.services .box.active , .services .box:hover{
+  border-bottom: 3px solid var(--fristColor);
+}
+.services .box i{
+  display: block;
+  font-size: 60px;
+  margin-bottom: 14px;
+  color: var(--fristColor);
+}
+.services .box a{
+  color: #212121;
+  font-size: 16px;
+  font-weight: 700;
+}
+.services .services-img img{
+  width: 100%;
+}
+.services .services-content{
+
+}
+.services .services-content h2{
+  font-size: 42px;
+  color: #303745;
+  line-height: 38px;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+.services .services-content p{
+  color: #646464 ;
+  font-weight: 600;
+  font-size: 15px;
+}
+.services .services-content ul{
+
+}
+.services .services-content ul li{
+  line-height: 26px;
+  color: #646464 ;
+  font-weight: 600;
+  font-size: 15px;
+}
+.services .services-content ul li i{
+  color:var(--fristColor);
+  font-size: 15px;
+  margin-right: 7px;
+}
+.services .btn-full-back{
+  background-color: #fff;
+  border: 1px solid #009961;
+  color: var(--fristColor)
+}
+.services .btn-full-back::before{
+  background-color: var(--fristColor);
+
+}
+.services .btn-full-back:hover{
+  color:#fff;
+}
+@media (max-width:991px) {
+  .services .title-center {
+    width: 100%;
+}
+}
+@media (max-width:768px) {
+  .services .services-content {
+    margin-top: 20px;
+}
+.services .title-center h2 {
+  font-size: 30px;
+}
+}
+@media (max-width:575px) {
+  .services .services-content {
+    margin-top: 22px;
+}
+.services .services-content h2 {
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 16px;
+}
+.services .title-center h2 {
+  font-size: 26px;
+  line-height: 38px;
+}
+}
+/* ==================project============ */
+.project{
+  background-color: #fafafa;
+  padding: 100px 0;
+}
+.project .img-project{
+  transform: scale(.9);
+  -webkit-transform: scale(.9);
+  -moz-transform: scale(.9);
+  -ms-transform: scale(.9);
+  -o-transform: scale(.9);
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.project .box{
+  position: relative;
+  margin-bottom: 82px;
+}
+.project .box img{
+  transition: all .4s ease-in;
+  -webkit-transition: all .4s ease-in;
+  -moz-transition: all .4s ease-in;
+  -ms-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+}
+.project .box:hover img{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.project .box .content{
+  box-shadow: 0 6px 25px rgb(0 0 0 / 7%);
+  background: #ffffff;
+  padding: 18px 0;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom:-5%;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.project .box .content a{
+  color: #282828;
+  font-size: 20px;
+  font-weight: 700;
+  transition: all .4s ease-in;
+  -webkit-transition: all .4s ease-in;
+  -moz-transition: all .4s ease-in;
+  -ms-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+}
+.project .box .content p{
+  color: #282828;
+  margin-top: -10px;
+  opacity: 0;
+  transition: all .4s ease-in;
+  -webkit-transition: all .4s ease-in;
+  -moz-transition: all .4s ease-in;
+  -ms-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+}
+.project .box:hover .content p{
+  margin-top: 0px;
+  opacity:1;
+}
+.project .box:hover .content a{
+  color: var(--fristColor);
 }
